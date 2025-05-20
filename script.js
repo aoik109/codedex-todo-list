@@ -19,4 +19,14 @@ function addTask() {
     `
     listContainer.appendChild(li);
     inputBox.value = "";
+
+    const checkbox = li.querySelector("input");
+    const editBtn = li.querySelector(".edit-btn");
+    const taskSpan = li.querySelector("span");
+    const deleteBtn = li.querySelector(".delete-btn");
+
+    checkbox.addEventListener("click", function() {
+        li.classList.toggle("complete", checkbox.checked);
+    });
+    
 }
